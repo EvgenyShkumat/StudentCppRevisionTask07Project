@@ -29,5 +29,8 @@
 */
 
 bool task04(int x1, int y1, int x2, int y2) {
-	return false;
+	return ((abs(x2 - x1) <= 1 && abs(y2 - y1) <= 1 && abs(x2 - x1) + abs(y2 - y1) != 0) ||
+		((abs(x1 - x2) == abs(y1 - y2)) && (x1 - x2 != 0)) || 
+		(x1 == x2 && y1 != y2 || y1 == y2 && x1 != x2)) &&
+		!(x1 > 8 || x2 > 8 || y1 > 8 || y2 > 8 || x1 < 1 || x2 < 1 || y1 < 1 || y2 < 1);
 }
